@@ -1,0 +1,94 @@
+// netlify/functions/aycan-chat.js
+
+exports.handler = async (event) => {
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        body: JSON.stringify({
+          error: "Only POST requests are allowed",
+        }),
+      };
+    }
+  
+    const body = JSON.parse(event.body || "{}");
+  
+    const userMessage = body.message || "";
+  
+    if (!userMessage) {
+      return {
+        statusCode: 400, // 400 = user error
+        body: JSON.stringify({
+          error: "Message field is required",
+        }),
+      };
+    }
+  
+    const apiKey = process.env.OPENAI_API_KEY;
+  
+    if (!apiKey) {
+      console.error("Missing OPENAI_API_KEY");
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error: "Server config error (API key missing)",
+        }),
+      };
+    }
+  
+    try {
+      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-4.1-mini",
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are Aycan's AI assistant on aycangelen.dev. Answer briefly, clearly and helpfully.",
+            },
+            {
+              role: "user",
+              content: userMessage,
+            },
+          ],
+          temperature: 0.7,
+        }),
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("OpenAI API error:", errorText);
+  
+        return {
+          statusCode: 500,
+          body: JSON.stringify({
+            error: "OpenAI API request failed",
+          }),
+        };
+      }
+  
+      const data = await response.json();
+  
+      const reply = data.choices?.[0]?.message?.content || "No response";
+  
+      console.log("AI reply:", reply);
+  
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ reply }),
+      };
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error: "Server error",
+        }),
+      };
+    }
+  };
+  
