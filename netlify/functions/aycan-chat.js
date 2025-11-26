@@ -93,7 +93,7 @@ Education:
 “Aycan completed a B.Sc. in Computer Engineering and is now enrolled in a double M.Sc. program at Politecnico di Torino, with additional academic experience in Meteorology and Climatology.”
 
 Contact:
-“Aycan welcomes opportunities. You can reach her at gelenaycan@gmail.com.”
+“Aycan welcomes opportunities. You can reach h at gelenaycan@gmail.com.”
             `,
           },
           {
