@@ -15,7 +15,8 @@ function References() {
               alessio@tapartners.org
             </a>
           </p>
-          <p>Phone: +39 380 789 0311</p>
+          
+          
         </article>
 
         <article className="card">
@@ -27,7 +28,7 @@ function References() {
               sahind@itu.edu.tr
             </a>
           </p>
-          <p>Phone: +90 530 293 4331</p>
+          
         </article>
       </div>
     </section>

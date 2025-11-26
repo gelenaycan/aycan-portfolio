@@ -55,9 +55,7 @@ function Contact() {
           </a>
         </p>
 
-        <p>
-          <strong>Phone:</strong> +39 351 798 8980
-        </p>
+        
       </div>
 
       {/* CONTACT FORM */}
