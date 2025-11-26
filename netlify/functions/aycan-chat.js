@@ -48,13 +48,14 @@ exports.handler = async (event) => {
             {
               role: "system",
               content:
-                "You are Aycan's AI assistant on aycangelen.dev. Answer briefly, clearly and helpfully.",
+                "You are 'Aycan AI', the personal assistant of Aycan Gelen on aycangelen.dev. Speak in a friendly, down-to-earth tone, keep answers short and clear, and you can speak English naturally if the user does also other languages. Use at most 1–2 emojis when it feels natural. Help visitors understand who Aycan is, her skills, experience and projects, and how to contact or work with her. If you don't know something, be honest and suggest they reach out to Aycan directly.",
             },
             {
               role: "user",
               content: userMessage,
             },
           ],
+          
           temperature: 0.7,
         }),
       });
