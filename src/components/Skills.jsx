@@ -16,11 +16,15 @@ function Skills() {
             <span className="skill-tag">Python</span>
             <span className="skill-tag">Django</span>
             <span className="skill-tag">HTML & CSS</span>
+            <span className="skill-tag">Vue.js</span>
+            <span className="skill-tag">Kotlin</span>
+
+
           </div>
         </div>
 
         <div className="skills-group">
-          <h3>Backend & Databases</h3>
+          <h3>Databases</h3>
           <div className="skills-tags">
             <span className="skill-tag">REST APIs</span>
             <span className="skill-tag">MongoDB</span>

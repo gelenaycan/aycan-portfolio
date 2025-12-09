@@ -8,13 +8,7 @@ function Education() {
       <div className="cards">
         <article className="card">
           <h3>Politecnico di Torino(PoliTo)</h3>
-          <p>M.Sc. in Engineering and Management</p>
-          <p>2025 – Present · Turin, Italy</p>
-        </article>
-
-        <article className="card">
-          <h3>Politecnico di Torino(PoliTo) </h3>
-          <p>M.Sc. in Digital Skills for Sustainable Societal Transitions</p>
+          <p>M.Sc. in Engineering and Management and M.Sc. in Digital Skills for Sustainable Societal Transitions -Double Degree </p>
           <p>2025 – Present · Turin, Italy</p>
         </article>
 
