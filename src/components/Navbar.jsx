@@ -1,33 +1,45 @@
-// src/components/Navbar.jsx
 import { useState } from "react";
-
-function Navbar() {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
-
   return (
     <header className="navbar">
-      <div className="nav-brand">Aycan Gelen</div>
-
-      <button
-        className="nav-toggle"
-        onClick={() => setOpen(!open)}
-        aria-label="Toggle navigation"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
-      <nav className={`nav-links ${open ? "nav-links-open" : ""}`}>
-        <a href="#about" onClick={() => setOpen(false)}>About</a>
-        <a href="#education" onClick={() => setOpen(false)}>Education</a>
-        <a href="#experience" onClick={() => setOpen(false)}>Experience</a>
-        <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
-        <a href="#references" onClick={() => setOpen(false)}>References</a>
-        <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
-      </nav>
+      <div className="container nav-inner">
+        <a className="brand" href="#about" aria-label="Aycan Gelen home">
+          ag<span>.</span>
+        </a>
+        <button
+          className="nav-toggle"
+          aria-expanded={open}
+          aria-controls="navigation"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? "Close ×" : "Menu ☰"}
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Main navigation"
+          className={open ? "nav-links open" : "nav-links"}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setOpen(false);
+          }}
+        >
+          {["Experience", "Projects", "Skills", "Education", "Contact"].map(
+            (label) => (
+              <a
+                key={label}
+                href={`#${label.toLowerCase()}`}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </a>
+            ),
+          )}
+        </nav>
+        <a className="nav-contact" href="mailto:gelenaycan@gmail.com">
+          Let’s talk ↗
+        </a>
+      </div>
     </header>
   );
 }
-
-export default Navbar;
