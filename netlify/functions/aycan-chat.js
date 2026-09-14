@@ -40,7 +40,6 @@ exports.handler = async (event) => {
     };
   }
 
-  // ---- 1) MongoDB connection ----
   let mongoClient;
   try {
     mongoClient = new MongoClient(mongoUri);
@@ -49,7 +48,6 @@ exports.handler = async (event) => {
     console.error("MongoDB connect error:", err);
   }
 
-  // ---- 2) OpenAI API çağrısı ----
   let aiReply = "No response";
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -140,7 +138,7 @@ STRICT BOUNDARIES (NEVER DISCUSS)
 
 If someone asks about these:
 → Respond humorously:
-  “Ahaha, Aycan never talks about that 😄 but feel free to email her!”
+  “Ahaha, Aycan never talks about that, but feel free to email her!”
 
 ─────────────────────────────────
 IF YOU DON'T KNOW SOMETHING
@@ -172,7 +170,6 @@ projects, and how to contact her — always using *she/her* pronouns.
     aiReply = "Server error 😵";
   }
 
-  // ---- 3) Logları MongoDB'ye kaydet ----
   try {
     const db = mongoClient.db("aycan-chat-db");
     const logs = db.collection("messages");
@@ -190,7 +187,6 @@ projects, and how to contact her — always using *she/her* pronouns.
     mongoClient?.close();
   }
 
-  // ---- 4) Cevap gönder ----
   return {
     statusCode: 200,
     body: JSON.stringify({ reply: aiReply }),
