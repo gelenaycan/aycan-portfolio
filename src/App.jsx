@@ -35,10 +35,20 @@ export default function App() {
           aria-labelledby="hero-title"
         >
           <div className="hero-copy">
-            <p className="eyebrow">
-              <span className="dot" />
-              {profile.location} / Software & AI
-            </p>
+            <div className="hero-introduction">
+              <img
+                className="hero-portrait"
+                src="/photo.png"
+                alt="Aycan Gelen"
+                width="112"
+                height="132"
+                fetchPriority="high"
+              />
+              <p className="eyebrow">
+                <span className="dot" />
+                {profile.location} / Software & AI
+              </p>
+            </div>
             <h1 id="hero-title">
               Aycan Gelen
               <span>

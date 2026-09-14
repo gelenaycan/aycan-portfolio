@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 :root {
   font-family: "DM Sans", sans-serif;
-  color: #202c29;
-  background: #fafbf8;
+  color: #34282f;
+  background: #fffaf9;
   font-synthesis: none;
-  --green: #255847;
-  --muted: #63716b;
-  --line: #dde3dc;
+  --accent: #914b68;
+  --muted: #75616b;
+  --line: #eadbe1;
 }
 * {
   box-sizing: border-box;
@@ -42,7 +42,7 @@ button:disabled {
   opacity: 0.6;
 }
 :focus-visible {
-  outline: 3px solid #b46b27;
+  outline: 3px solid #914b68;
   outline-offset: 5px;
 }
 h1,
@@ -61,7 +61,7 @@ button {
 }
 em {
   font-style: normal;
-  color: var(--green);
+  color: var(--accent);
 }
 .container {
   width: min(1180px, calc(100% - 96px));
@@ -81,7 +81,7 @@ em {
 .navbar {
   position: sticky;
   top: 0;
-  background: #fafbf8f2;
+  background: #fffaf9f2;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   z-index: 20;
@@ -99,7 +99,7 @@ em {
   font-weight: 800;
 }
 .brand span {
-  color: #648b60;
+  color: #b77590;
 }
 .nav-links {
   display: flex;
@@ -109,7 +109,7 @@ em {
 }
 .nav-contact {
   font-size: 13px;
-  border-bottom: 1px solid #83978a;
+  border-bottom: 1px solid #b78d9e;
   padding-bottom: 8px;
 }
 .nav-toggle {
@@ -135,7 +135,7 @@ em {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #598360;
+  background: #b77590;
   margin-right: 10px;
 }
 .hero h1 {
@@ -171,7 +171,7 @@ em {
 }
 .button {
   padding: 14px 18px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
   border: 1px solid var(--line);
@@ -181,9 +181,9 @@ em {
   background: transparent;
 }
 .primary {
-  background: var(--green);
+  background: var(--accent);
   color: white;
-  border-color: var(--green);
+  border-color: var(--accent);
 }
 .secondary {
   background: #fff;
@@ -200,18 +200,18 @@ em {
   color: var(--muted);
 }
 .impact-panel {
-  background: #edf1e7;
+  background: linear-gradient(135deg, #fbeef2, #f3dce6);
   padding: 30px 32px 23px;
-  border: 1px solid #dde5d6;
-  border-radius: 8px;
-  transform: rotate(1deg);
+  border: 1px solid #e9cfd9;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px #914b680a;
 }
 .panel-top {
   display: flex;
   justify-content: space-between;
   font-size: 9px;
   letter-spacing: 1.8px;
-  color: #53644e;
+  color: #725563;
 }
 .metric {
   padding: 30px 0;
@@ -222,7 +222,7 @@ em {
   font-weight: 500;
   letter-spacing: -6px;
   line-height: 1;
-  color: #315641;
+  color: #86435f;
 }
 .metric > strong span {
   font-size: 43px;
@@ -237,12 +237,12 @@ em {
   font-size: 12px;
   line-height: 1.8;
   margin-top: 12px;
-  color: #5c6a57;
+  color: #725563;
   max-width: 285px;
 }
 .metric-row {
-  border-top: 1px solid #cbd6c4;
-  border-bottom: 1px solid #cbd6c4;
+  border-top: 1px solid #e4c8d3;
+  border-bottom: 1px solid #e4c8d3;
   padding: 22px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,12 +255,12 @@ em {
 }
 .metric-row span {
   font-size: 10px;
-  color: #53644e;
+  color: #725563;
 }
 .panel-foot {
   font-size: 9px;
   line-height: 1.6;
-  color: #53644e;
+  color: #725563;
   margin-top: 20px;
 }
 .focus-strip {
@@ -273,7 +273,7 @@ em {
   padding-block: 23px;
   font-size: 10px;
   letter-spacing: 1.8px;
-  color: #68766b;
+  color: #75616b;
 }
 .section {
   padding-block: 80px;
@@ -309,7 +309,7 @@ em {
   letter-spacing: -0.6px;
 }
 .job-role {
-  color: var(--green);
+  color: var(--accent);
   font-size: 13px;
   margin-top: 8px;
 }
@@ -337,11 +337,11 @@ em {
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 5px 9px;
-  color: #536159;
-  background: #fafbf8;
+  color: #725563;
+  background: #fffaf9;
 }
 .project-section {
-  background: #f0f3ed;
+  background: #fcf0f4;
   border-block: 1px solid var(--line);
   scroll-margin-top: 84px;
 }
@@ -351,8 +351,8 @@ em {
   gap: 20px;
 }
 .project-card {
-  border: 1px solid #d8dfd5;
-  border-radius: 7px;
+  border: 1px solid #eadbe1;
+  border-radius: 14px;
   overflow: hidden;
   background: #fff;
   display: flex;
@@ -367,19 +367,19 @@ em {
   border-bottom: 1px solid var(--line);
 }
 .art-0 {
-  background: #e2e9d9;
+  background: #f2dce5;
 }
 .art-1 {
-  background: #e0e8e8;
+  background: #eee2ec;
 }
 .art-2 {
-  background: #ebe5dc;
+  background: #f3e6de;
 }
 .art-label,
 .art-caption {
   font-size: 8px;
   letter-spacing: 1.4px;
-  color: #53665a;
+  color: #725563;
 }
 .art-caption {
   font-size: 7px;
@@ -393,12 +393,12 @@ em {
 }
 .chart-bars i {
   flex: 1;
-  background: #567653;
+  background: #b77590;
   border-radius: 2px 2px 0 0;
   opacity: 0.8;
 }
 .chart-bars i:last-child {
-  background: #284e36;
+  background: #86435f;
   opacity: 1;
 }
 .match-graphic {
@@ -409,14 +409,14 @@ em {
 }
 .match-graphic span {
   padding: 13px 9px;
-  background: #fafbf8a8;
-  border: 1px solid #adbfbe;
-  border-radius: 5px;
+  background: #fffaf9a8;
+  border: 1px solid #c9abba;
+  border-radius: 10px;
   font-size: 8px;
   letter-spacing: 0.5px;
 }
 .match-graphic b {
-  color: #56716b;
+  color: #86435f;
 }
 .plan-graphic {
   display: flex;
@@ -425,8 +425,8 @@ em {
 }
 .plan-graphic span {
   font-size: 10px;
-  border: 1px solid #cdc2af;
-  background: #faf8f3;
+  border: 1px solid #d7bfb6;
+  background: #fffaf7;
   padding: 9px 12px;
   border-radius: 3px;
 }
@@ -468,7 +468,7 @@ em {
   display: block;
   font-size: 12px;
   font-weight: 600;
-  color: var(--green);
+  color: var(--accent);
 }
 .project-outcome small {
   display: block;
@@ -548,8 +548,8 @@ em {
   color: var(--muted);
 }
 .contact-section {
-  background: #e7eddf;
-  border-block: 1px solid #d5dfcd;
+  background: #f5e3eb;
+  border-block: 1px solid #e9cfd9;
   padding-block: 65px;
 }
 .contact-inner {
@@ -581,7 +581,7 @@ em {
 .contact-links .contact-email {
   font-size: 18px;
   word-break: break-word;
-  border-bottom: 1px solid #9dae96;
+  border-bottom: 1px solid #bf93a6;
   padding-bottom: 15px;
   margin-bottom: 3px;
 }
@@ -609,13 +609,13 @@ footer {
   display: flex;
   gap: 12px;
   align-items: center;
-  border: 1px solid #547364;
-  background: #255847;
+  border: 1px solid #914b68;
+  background: #914b68;
   color: white;
   border-radius: 100px;
   padding: 14px 20px;
   font-size: 12px;
-  box-shadow: 0 4px 18px #20362922;
+  box-shadow: 0 4px 18px #79435c18;
   margin-left: auto;
 }
 .chat-launcher span {
@@ -626,7 +626,7 @@ footer {
   height: min(490px, calc(100dvh - 110px));
   background: white;
   border: 1px solid var(--line);
-  box-shadow: 0 12px 60px #20362922;
+  box-shadow: 0 12px 60px #79435c18;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -637,7 +637,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 18px;
-  background: #edf1e7;
+  background: #f7e7ed;
 }
 .chat-panel header span {
   display: block;
@@ -664,13 +664,13 @@ footer {
 .message {
   padding: 12px;
   margin-top: 12px;
-  background: #f0f3ed;
-  border-radius: 7px;
+  background: #fcf0f4;
+  border-radius: 14px;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 .message.user {
-  background: var(--green);
+  background: var(--accent);
   color: white;
   margin-left: 20px;
 }
@@ -691,13 +691,13 @@ footer {
   width: 0;
   flex: 1;
   padding: 10px;
-  border: 1px solid #b4c2b9;
+  border: 1px solid #bf93a6;
   border-radius: 4px;
   font-size: 13px;
 }
 .chat-panel form button {
   border: 0;
-  background: var(--green);
+  background: var(--accent);
   color: white;
   border-radius: 4px;
   font-size: 12px;
@@ -771,7 +771,7 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background: #fafbf8;
+    background: #fffaf9;
     border-bottom: 1px solid var(--line);
     padding: 20px;
     flex-direction: column;
@@ -918,7 +918,29 @@ footer {
     scroll-behavior: auto;
   }
 }
+.hero-introduction {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.hero-portrait {
+  display: block;
+  width: 112px;
+  height: 132px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 18px;
+  border: 3px solid white;
+  box-shadow: 0 6px 24px #914b6818;
+}
+@media (max-width: 720px) {
+  .hero-introduction { gap: 16px; }
+  .hero-portrait { width: 88px; height: 104px; border-radius: 14px; }
+}
+
 @media print {
+  .hero-portrait { display: none; }
   @page {
     margin: 15mm;
   }
