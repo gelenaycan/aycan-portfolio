@@ -22,7 +22,7 @@ The new information architecture is: professional introduction and evidence → 
 
 The 76% metric retains its original CV wording and its 26-to-6-minute / three-user validation context. The 40,000+ profiles refer to KiTalent; 40+ customer accounts refer to FPT. Decorative project graphics are conceptual illustrations, not product screenshots or real chart data. Project summaries deliberately avoid invented demo URLs.
 
-Pending content: a public repo/demo URL for the AI Project Management Platform, and confirmation of the GitHub profile discrepancy (`aycangelen` in the CV versus the verified repository owner `gelenaycan`). The verified owner is currently linked. The source PDF and its phone number are not included in this repository.
+The AI Project Management Platform is not yet on GitHub; per the owner, keep the focus on the portfolio and show no repository link. One source discrepancy remains (`aycangelen` in the CV versus the verified repository owner `gelenaycan`). The verified owner is currently linked. The source PDF and its phone number are not included in this repository.
 
 ## Assistant
 
